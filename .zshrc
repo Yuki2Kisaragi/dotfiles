@@ -24,9 +24,13 @@ alias vim="nvim"
 alias view="nvim -R"
 
 export PATH=$HOME/.cargo/bin:$PATH
-alias ll="exa -l"
-alias cat="bat"
+
+# ls=exa
 alias ls="exa"
+alias ll="exa -l"
+alias la="exa -la"
+
+alias cat="bat"
 alias python="python3"
 alias pip="pip3"
 
@@ -44,7 +48,9 @@ alias g="git"
 # 補完
 compdef g=git
 
-compdef cargo
+# cargo
+alias cr="/home/masahero/.cargo/bin/cargo"
+compdef cr=/home/masahero/.cargo/bin/cargo
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
